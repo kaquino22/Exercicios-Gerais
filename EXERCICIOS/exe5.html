@@ -45,6 +45,10 @@
             somaVenda = preco * qtd;
             comicao = somaVenda * 0.05;
 
+            preco.innerHTML = "";
+            qtd.innerHTML = "";
+
+
             resultado.innerHTML = "O Total da Venda foi de R$" + somaVenda + " " + "Sua Comissão foi de R$" + comicao;
         }
     </script>
