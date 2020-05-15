@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="titulo">Exercicios Js - 1 </p>
+        <div class="box">
+            </br>
+            <p style="font-family: Arial, Helvetica, sans-serif;">Calcular Peso do Peixe , Limite de 50Kg(R$2/Kg) , Passou  é multado e o preço do peixe vai para R$4</p>
+            </br>
+            <div class="valores">
+                <input class="inputCenter" placeholder="Kg do Peixe" id="kg" type="text"></br>
+               
+                </br>
+                <button onclick="calcular()" type="submit">Calcular</button> </br>
+                </br>
+                Resultado
+                </br>
+                <div id="resultado">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        kg = document.getElementById('kg');
+        resultado = document.getElementById('resultado');
+
+        function calcular() {
+            kilo = parseInt(kg.value);
+          if(kilo > 50){
+              kgnovo = kilo - 50 ;
+              kgsobra = kgnovo * 4;
+              kgtotal = 100 + kgsobra;
+           
+
+              resultado.innerHTML = "Passou " + kgnovo +"Kg você foi multado em R$" + kgsobra + " deu o total de R$" + kgtotal;
+              kg.innerHTML = "";
+          }else{
+              kgnormal = kilo * 2;
+              
+              resultado.innerHTML = "Boa! não foi multado, a compra deu R$" + kgnormal;
+              kg.innerHTML = "";
+          }         
+        }
+    </script>
+</body>
+
+</html>
