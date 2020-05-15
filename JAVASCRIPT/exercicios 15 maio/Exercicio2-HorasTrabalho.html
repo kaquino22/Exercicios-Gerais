@@ -17,7 +17,7 @@
             <p style="font-family: Arial, Helvetica, sans-serif;">Calculo de horas trabalhadas (1 hora = R$10,00) se passar de 50 horas passa a valer R$20,00</p>
             </br>
             <div class="valores">
-                <input class="inputCenter" placeholder="Kg do Peixe" id="kg" type="text"></br>
+                <input class="inputCenter" placeholder="Horas Trabalhas" id="hr" type="text"></br>
                
                 </br>
                 <button onclick="calcular()" type="submit">Calcular</button> </br>
@@ -33,23 +33,23 @@
     </div>
 
     <script type="text/javascript">
-        kg = document.getElementById('kg');
+        hora = document.getElementById('hr');
         resultado = document.getElementById('resultado');
 
         function calcular() {
-            kilo = parseInt(kg.value);
-          if(kilo > 50){
-              kgnovo = kilo - 50 ;
-              kgsobra = kgnovo * 4;
-              kgtotal = 100 + kgsobra;
+            horas = parseInt(hora.value);
+          if(horas > 50){
+              horanova = hora - 50 ;
+              horasobra = horanova * 20;
+              horatotal = 500 + horasobra;
            
 
-              resultado.innerHTML = "Passou " + kgnovo +"Kg você foi multado em R$" + kgsobra + " deu o total de R$" + kgtotal;
+              resultado.innerHTML = "Passou " + horanova +"Hrs então irá receber R$" + horasobra + " a mais e  deu o total de R$" + horatotal;
               kg.innerHTML = "";
           }else{
-              kgnormal = kilo * 2;
-              
-              resultado.innerHTML = "Boa! não foi multado, a compra deu R$" + kgnormal;
+              horanormal = horas * 10;
+
+              resultado.innerHTML = "Não passou as horas então irá receber R$" + horanormal;
               kg.innerHTML = "";
           }         
         }
