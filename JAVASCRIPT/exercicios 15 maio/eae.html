@@ -1,0 +1,38 @@
+<script type="text/javascript">
+
+    //Pegando Valores
+    const sexo = parseInt(prompt("Qual o seu sexo? 1 - Masculino | 2 - Feminino"))
+    const peso = parseInt(prompt("Qual o seu peso atual? "))
+    const altura = parseInt(prompt("Qual a sua altura atual? Ex: 180 - para 1.80"))
+
+    const alturaC = (altura / 100).toFixed(2) // Tratando o prompt
+
+    if (sexo == 1) {
+        var pesoIdeal = (alturaC * 72.7) - 58 // 1.8 * 72,7 = 130.86 - 58 = 72.86
+
+        if (peso > pesoIdeal) {   // 80 > 72.86
+            var resposta = peso - pesoIdeal 
+            alert(`Voce prescisa emagrecer ${(resposta - 3).toFixed(2) } para ficar com 3 kilos que está na margem do peso ideal que é: ${pesoIdeal.toFixed(2)}, Contudo para chegar no seu peso ideal é necessario emagrecer: ${(resposta ).toFixed(2)} Kg  `)
+        } else if (peso < pesoIdeal) { //
+            let resposta = pesoIdeal - peso
+            alert(`Voce prescisa engordar ${(resposta + 3).toFixed(2)}  para ficar com 3 kilos que está na margem do peso ideal que é: ${pesoIdeal.toFixed(2)}, Contudo para chegar no seu peso ideal é necessario engordar: ${(resposta ).toFixed(2)} Kg `)
+        } else {
+            alert(" Você está no seu peso ideal")
+        }
+    }
+
+
+    if (sexo == 2) {
+        let pesoIdeal = (alturaC * 62.1) - 44.7
+        if (peso > pesoIdeal) {   // 80 > 72.86
+            var resposta = peso - pesoIdeal
+            alert(`Voce prescisa emagrecer ${(resposta - 3).toFixed(2) } para ficar com 3 kilos que está na margem do peso ideal que é: ${pesoIdeal.toFixed(2)}, Contudo para chegar no seu peso ideal é necessario emagrecer: ${(resposta ).toFixed(2)} Kg  `)
+        } else if (peso < pesoIdeal) { //
+            let resposta = pesoIdeal - peso
+            alert(`Voce prescisa engordar ${(resposta +3).toFixed(2)}  para ficar com 3 kilos que está na margem do peso ideal que é: ${pesoIdeal.toFixed(2)} Contudo para chegar no seu peso ideal é necessario engordar: ${(resposta ).toFixed(2)} Kg `)
+        } else {
+            alert(" Você está no seu peso ideal")
+        }
+    }
+
+</script>
